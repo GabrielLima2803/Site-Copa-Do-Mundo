@@ -1,149 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copa do Mundo</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="shortcut icon" href="imagens/copa-do-mundo.png" type="image/x-icon">
 
-    <style>
-      .row-criada{
-        display: grid;
-        column-gap: 10px;
-        grid-template-columns: repeat(4, 1fr);
-      }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copa do Mundo</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="shortcut icon" href="imagens/copa-do-mundo.png" type="image/x-icon">
+
+  <style>
+    .row-criada {
+      display: grid;
+      column-gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .zoom {
+      transition: transform .2s;
+      /* Animation */
+    }
+
+    .zoom:hover {
+      transform: scale(1.020);
+      /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    #grid-1{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 33.33% 33.33% 33.33%;
+    }
+    .imagem-grid{
+      grid-column: 1 span 3;
+    }
+    .g-1{
+      columns: 2;
+      grid-row: 1;
+    }
+  </style>
 </head>
+
 <body>
 
-   
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3 sticky-top">
-        <div class="container-fluid">
-          <a class="navbar-brand p-2" href="index.html"><img src="imagens/futebol.png" width="50px" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="">Brasil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Tabelas</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tópicos</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Link</a></li>
-                  <li><a class="dropdown-item" href="#">Another link</a></li>
-                </ul>
-              </li>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand p-2" href="index.html"><img src="imagens/futebol.png" width="50px" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Brasil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Partidas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Tabelas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tópicos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Link</a></li>
+              <li><a class="dropdown-item" href="#">Another link</a></li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="text" placeholder="Search">
-              <button class="btn btn-primary" type="button">Search</button>
-            </form>
-          </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="corCopa" class="p-4 text-center bg-dark text-light border-top border-secondary">
+    <h1>Copa do Mundo 2022!!</h1>
+    <p>Copa do mundo no Catar Chegou, Venha ver mais sobre esse grandioso campeonato</p>
+  </div>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagens/Netherlands-v-Ecuador-Group-A-FIFA-World-Cup-Qatar-2022.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Copa do Mundo do Qatar 2022!!</h5>
+          <p>Copa de 2022, Diretamente no Qatar</p>
         </div>
-      </nav>
-
-      
-
-        <div id="corCopa" class="p-4 text-center bg-dark text-light border-top border-secondary" >
-            <h1>Copa do Mundo 2022!!</h1>
-            <p>Copa do mundo no Catar Chegou, Venha ver mais sobre esse grandioso campeonato</p> 
-          </div>
-            
-          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="imagens/Commercial-Affiliates-Marketing-Workshop-Day-5.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/Qatar-2022-s-32-teams-graphic.webp" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/Qatar-2022-s-32-teams-graphic.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Os Melhores</h5>
+          <p>Melhores jogadores da copa do mundo.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/Brazil-v-Serbia-Group-G-FIFA-World-Cup-Qatar-2022.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Comeeçaaaaaa Os jogos</h5>
+          <p>Que começas os jogos da copa do mundo do Qatar.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-          <div class="container mt-5">
-            <div class="row">
-              <div class="col-sm-4 text-light">
-
-              </div>
-              <div class="col-sm-4">
-                <h3>Catar</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              </div>
-
-          </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4 text-light">
+        <br>
+      </div>
+      <div class="col-sm-4">
+        <h3 class="text-center">Como sera a Copa do mundo no Qatar</h3>
+        <p>Com sete cidades-sede, o campeonato está sendo disputado entre 20 de novembro e terminará em 18 de dezembro.
+        </p>
+        <p>Ao invés do período tradicional devido às altas temperaturas que o país sofre no meio do ano; esta é a
+          primeira vez em que uma Copa do Mundo é disputada no final do ano.</p>
+      </div>
 
     </div>
 
-    
+  </div>
 
-    <div class="container">
-    <div class="row-criada"> 
+
+
+  <div class="container mt-5">
+    <div class="row-criada">
       <div class="card">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-  
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagens/world_cup_group_a.jpeg" class="card-img-top zoom" alt="...">
         <div class="card-body">
           <h5 class="card-text">Grupo A.</h5>
           <p>Este grupo consiste em Qatar, Equador, Senegal e Holanda</p>
         </div>
       </div>
-  
+
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagens/B.jpg" class="card-img-top zoom" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-text">Grupo B.</h5>
+          <p>Este grupo consiste em Inglaterra, Irã, Estados Unidos e País de Gales</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/world_cup_group_C.jpeg" class="card-img-top zoom" alt="...">
+        <div class="card-body">
+          <h5 class="card-text">Grupo C.</h5>
+          <p>Este grupo consiste em Arábia Saudita, Polônia, México e Argentina</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="imagens/D.jpg" class="card-img-top zoom" alt="...">
+        <div class="card-body">
+          <h5 class="card-text">Grupo D.</h5>
+          <p>Este grupo consiste em França, Tunísia, Dinamarca e Austrália</p>
         </div>
       </div>
 
@@ -151,38 +186,49 @@
       <br>
     </div>
 
-    <div class="row-criada"> 
+    <div class="row-criada">
       <div class="card">
-        <img src="" class="card-img-top" alt="...">
+        <img src="imagens/E.webp" class="card-img-top zoom" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-text">Grupo E.</h5>
+          <p>Este grupo consiste em Espanha, Japão, Alemanha e Costa Rica</p>
         </div>
       </div>
-      
+
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagens/world_cup_group_f.jpeg" class="card-img-top zoom" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-text">Grupo F.</h5>
+          <p>Este grupo consiste em Bélgica, Croácia, Marrocos e Canadá</p>
         </div>
       </div>
-  
+
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagens/world_cup_group_g.webp" class="card-img-top zoom" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-text">Grupo G.</h5>
+          <p>Este grupo consiste em Brasil, Suíça, Camarões e Sérvia</p>
         </div>
       </div>
-  
+
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="imagens/world_cup_group_h.jpeg" class="card-img-top zoom" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-text">Grupo H.</h5>
+          <p>Este grupo consiste em Portugal, Coreia do Sul, Uruguai e Gana</p>
         </div>
       </div>
 
     </div>
 
-   
-    
+    <div id="grid-1" class="container mt-5">
+      <div class="imagem-grid"><img src="imagens/nj.jpg" width="400px" height="" alt=""></div>
+      <div class="g-1">AAAAAAA</div>
+      <div>AAAAAAA</div>
+      <div>AAAAAA</div>
+    </div>
+  </div>
+
 </body>
+
 </html>
